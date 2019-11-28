@@ -102,3 +102,56 @@ function rpsFrontEnd(choiceImage, botImageChoice, finalMessage) {
 
 // Challenge 4: Change the color of all buttons
 
+let allButtons = document.getElementsByTagName('button');
+console.log(allButtons);
+
+let copyAllButtons = [];
+for (let i =0; i < allButtons.length; i++) {
+    copyAllButtons.push(allButtons[i].classList[1]);
+}
+
+console.log(copyAllButtons);
+
+
+function buttonColorChange(colorSelect) {
+    if (colorSelect.value === 'red') {
+        buttonsRed();
+    }else if (colorSelect.value === 'green') {
+        buttonsGreen();
+    }else if (colorSelect.value === 'reset') {
+        buttonsColorReset();
+    }else if (colorSelect.value === 'random') {
+        randomColors();
+    }
+}
+
+function buttonsRed() {
+    for (let i=0; i < allButtons.length; i++) {
+        allButtons[i].classList.remove(allButtons[i].classList[1]);
+        allButtons[i].classList.add('btn-danger');
+    }
+}
+
+function buttonsGreen() {
+    for (let i=0; i < allButtons.length; i++) {
+        allButtons[i].classList.remove(allButtons[i].classList[1]);
+        allButtons[i].classList.add('btn-success');
+    }
+}
+
+function buttonsColorReset() {
+    for (let i=0; i < allButtons.length; i++) {
+        allButtons[i].classList.remove(allButtons[i].classList[1]);
+        allButtons[i].classList.add(copyAllButtons[i]);
+    }
+}
+
+function randomColors() {
+    let colorList = ['btn-primary','btn-success','btn-danger','btn-warning'];
+
+    for (let i=0; i < allButtons.length; i++) {
+        let randomNumber = Math.floor(Math.random() * 4);
+        allButtons[i].classList.remove(allButtons[i].classList[1]);
+        allButtons[i].classList.add(colorList[randomNumber]);
+    }
+}
