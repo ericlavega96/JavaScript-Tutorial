@@ -38,7 +38,7 @@
         <div class="flex-box-rps" id="flex-box-rps-div">
                 <img id="rock" src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Rock-paper-scissors_%28rock%29.png" width="150" height="150" onclick="rpsGame(this)" alt="" >
                 <img id="paper" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Rock-paper-scissors_%28paper%29.png/1024px-Rock-paper-scissors_%28paper%29.png" width="150" height="150" onclick="rpsGame(this)" alt="" >
-                <img id="scissors" src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Rock-paper-scissors_%28rock%29.png" width="150" height="150" onclick="rpsGame(this)" alt="" >
+                <img id="scissors" src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Rock-paper-scissors_%28scissors%29.png" width="150" height="150" onclick="rpsGame(this)" alt="" >
         </div>
     </div>
     <div class="container-4">
@@ -56,6 +56,39 @@
             <button class="btn btn-danger">Yahoo</button>
             <button class="btn btn-warning">Google</button>
             <button class="btn btn-success">Facebook!</button>
+        </div>
+    </div>
+    <div class="container-5">
+        <h2>Challenge 5: Black Jack</h2>
+        <h3><span id="blackjack-result">Let's play</span></h3>
+        <div class="flex-blackjack-row-1">
+            <div id="your-box">
+                <h2>You: <span id="your-blackjack-score">0</span></h2>
+            </div>
+            <div id="dealer-box">
+                <h2>Dealer: <span id="dealer-blackjack-score">0</span></h2>
+            </div>
+        </div>
+        <div class="flex-blackjack-row-2">
+            <div>
+                <button class="btn-lg btn-primary mr-2" id="blackjack-hit-button">Hit</button>
+                <button class="btn-lg btn-warning mr-2" id="blackjack-stand-button">Stand</button>
+                <button class="btn-lg btn-danger mr-2" id="blackjack-deal-button">Deal</button>
+            </div>
+        </div>
+        <div class="flex-blackjack-row-3">
+            <table>
+                <tr>
+                    <th>Wins</th>
+                    <th>Losses</th>
+                    <th>Draws</th>
+                </tr>
+                <tr>
+                    <td><span id="wins">0</span></td>
+                    <td><span id="losses">0</span></td>
+                    <td><span id="draws">0</span></td>
+                </tr>
+            </table>
         </div>
     </div>
 
